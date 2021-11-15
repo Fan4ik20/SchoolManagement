@@ -1,0 +1,17 @@
+Returns a information about invidividual course in JSON format.
+---
+parameters:
+ - in: path
+   name: course_id
+   type: integer
+   required: true
+
+tags:
+ - Courses
+
+responses:
+ 200:
+   description: Returns a information about course in JSON format.
+ 404:
+   description: Occurs if course with passed id does not exists.
+

@@ -1,0 +1,4 @@
+CREATE DATABASE school;
+
+CREATE USER tester WITH PASSWORD 'tester';
+GRANT ALL PRIVILEGES ON DATABASE "school" to tester;

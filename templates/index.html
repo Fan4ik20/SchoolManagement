@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <div>
+        <h1>Welcome to our university page!</h1>
+        <h3>Choose what you want from list:</h3>
+        <ul>
+            <li>
+                <h4><a href="{{ url_for('show_students') }}">
+                    Go to students</a>
+                </h4>
+            </li>
+
+            <li>
+                <h4><a href="{{ url_for('show_groups') }}">
+                    Go to groups</a>
+                </h4>
+            </li>
+
+            <li>
+                <h4><a href="{{ url_for('show_courses') }}">
+                    Go to courses</a>
+                </h4>
+
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

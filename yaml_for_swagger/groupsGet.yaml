@@ -1,0 +1,17 @@
+Returns a information about all groups in JSON format
+---
+parameters:
+ - in: query
+   name: students_count
+   type: string
+   required: false
+   description: if specified - returns groups with less or equal students count.
+
+tags:
+ - Groups
+
+responses:
+ 200:
+   description: Returns a information about all groups or with given count in JSON format.
+ 404:
+   description: Occurs if there is no information about any groups.

@@ -1,0 +1,23 @@
+Delete passed student or his course
+---
+parameters:
+ - in: path
+   name: student_id
+   type: integer
+   required: true
+
+ - in: query
+   name: course_name
+   type: string
+   required: false
+   description: if passed - The student will not be deleted, only his course.
+
+tags:
+ - Students
+
+responses:
+ 200:
+   description: Deletes student or his course, sends confimation.
+ 404:
+   description: Occurs if the student with passed id or course does not exists.
+

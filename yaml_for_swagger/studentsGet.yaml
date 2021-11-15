@@ -1,0 +1,17 @@
+Returns a information about all students in JSON format
+---
+parameters:
+ - in: query
+   name: course_name
+   type: string
+   required: false
+   description: if specified - returns students related to passed course.
+
+tags:
+ - Students
+
+responses:
+ 200:
+   description: Returns a information about all students in JSON format.
+ 404:
+   description: Occurs if there is no information about students and if was passed invalid course name.

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+    <div>
+        <h1>Student</h1>
+        <h2>{{ '{} {}'.format(student.first_name, student.last_name) }}</h2>
+        <h2><a href="{{ url_for('show_group', group_id=student.group_id) }}">
+            {{ 'Student group: {}'.format(student.group.name) }}
+        </a></h2>
+
+        <h2>Student courses:</h2>
+        <ul>
+            {% for course in student.courses %}
+                <li>
+                    <h2><a href="{{ url_for('show_course', course_id=course.id) }}">
+                        {{ 'Course: {}'.format(course.name) }}
+                    </a></h2>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <br><br>
+    <h4><a href="{{ url_for('show_students') }}">Back to students</a></h4>
+</body>
+</html>

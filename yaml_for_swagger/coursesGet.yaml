@@ -1,0 +1,10 @@
+Returns a information about all courses in JSON format
+---
+tags:
+ - Courses
+
+responses:
+ 200:
+   description: Returns a information about all courses in JSON format.
+ 404:
+   description: Occurs if there is no information about any courses.

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Group</title>
+</head>
+<body>
+    <div>
+        <h1>Group</h1>
+        <h2>{{ 'Group id: {}'.format(group.id) }}</h2>
+        <h2>{{ 'Group name: {}'.format(group.name) }}</h2>
+    </div>
+    <br>
+    <h3><a href="{{ url_for('show_students_related_to_group', group_id=group.id) }}">
+        Show students related to this group
+    </a></h3>
+
+    <br><br>
+    <h4><a href="{{ url_for('show_groups') }}">Back</a></h4>
+</body>
+</html>

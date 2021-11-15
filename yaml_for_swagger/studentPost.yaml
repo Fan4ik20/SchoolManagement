@@ -1,0 +1,34 @@
+Accept JSON with student data and save it to db.
+---
+parameters:
+ - in: path
+   name: student_id
+   type: integer
+   required: true
+
+ - in: query
+   name: course_name
+   type: string
+   required: false
+   description: if specified - an existing student will be added to the new course
+
+ - in: "body"
+   name: student_data
+   description: Student data than will de saved in db
+   example: {
+      "first_name": "Alex",
+      "last_name": "White",
+      "group_id": 3,
+   }
+   required: false
+
+tags:
+ - Students
+
+responses:
+ 200:
+   description: Saves driver in DB (or adds student to new course) and returns confirming.
+ 404:
+   description: Occurs if student with passed id already exists or in case the course_name is defined - does not exist
+ 400:
+   description: Occurs if passed JSON does not fit the schema. If course with given name does not exists.

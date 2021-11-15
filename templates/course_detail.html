@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Group</title>
+</head>
+<body>
+    <div>
+        <h1>Course</h1>
+        <h2>{{ course }}</h2>
+        <br>
+        <h3><a href="{{ url_for('show_students_related_to_course', course_id=course.id) }}">
+            Show students related to this course
+        </a></h3>
+
+        <br><br>
+        <h4><a href="{{ url_for('show_courses') }}">Back</a></h4>
+    </div>
+</body>
+</html>
